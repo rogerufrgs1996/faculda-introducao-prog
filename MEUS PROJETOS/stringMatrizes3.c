@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #define N 13
-#define M 30
+#define M 31
 #define TAMGOLEIRO 19
 int empate(int a, int b)
 {
@@ -192,7 +192,7 @@ void goleiroD(char matriz[N][M], int defesa, int inicio)
 {
     srand(time(NULL));
     int altura = rand() % 4;
-    char cabelo[]= "              ,,  ";
+    char cabelo[]= "            ,,    ";
     char olhos[] = "      s s <@.@>   ";
     char boca[] =  "      / s  ~~   s ";
     char braco[] = "    |<--||-->--s s";
@@ -273,11 +273,11 @@ int main()
                 if(inicio<=4){
                     goleiroE(matriz, defesa, inicio);
                 }
-                else if(inicio >=8){
+                else if(inicio>=8 ){
                     goleiroD(matriz, defesa, inicio);
                 }
                 else{
-                    goleiroM;
+                    goleiroM(matriz, defesa, inicio);
                 }
                 a= a + gol(matriz, chute);
                 printf("\n-----------------------------------------------------------------");
@@ -292,7 +292,7 @@ int main()
                 if(inicio<=4){
                     goleiroE(matriz, defesa, inicio);
                 }
-                else if(inicio >=8){
+                else if(inicio >=9){
                     goleiroD(matriz, defesa, inicio);
                 }
                 else{

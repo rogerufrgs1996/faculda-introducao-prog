@@ -78,7 +78,7 @@ int gol(char matriz[N][M], int chute)
     else if(matriz[i][j]=='+')
     {
         printf("NA TRAVE!! \n");
-        matriz[i][j] = 'O';
+        matriz[i][j] = 'X';
         momento(matriz);
         return 0;
     }
@@ -242,7 +242,10 @@ int main()
     int op =1;
     while (op !=0)
     {
+        printf("\nCaractere -> O: indica onde a bola entrou");
+        printf("\nCaractere -> X: indica onde a bola atingiu o goleiro ou a trave");
         printf("\nJOGAR: 1 ENCERRAR: 0  ->");
+
         scanf("%d", &op);
         if(op ==1)
         {
@@ -261,10 +264,10 @@ int main()
             int defesa;
             while(penalti < 6 || e == 0)
             {
-                printf("\n$$$$$$$$$$$$$$$$$$$$$PENALTI %d $$$$$$$$$$$$$$$$$$$$$$$$$", penalti);
-                printf("\n%s COBRADOR digite numero para #%d penalti->", timeA, penalti);
+                printf("\n-------------------PENALTI %d --------------------", penalti);
+                printf("\n%s COBRADOR #%d digite numero para CHUTAR->", timeA, penalti);
                 scanf("%d", &chute);
-                printf("\n%s DEFENSOR digite numero para #%d penalti->", timeB, penalti);
+                printf("\n%s DEFENSOR #%d digite numero para DEFENDER->", timeB, penalti);
                 scanf("%d", &defesa);
                 printf("\n");
                 goleira(matriz);
@@ -281,9 +284,9 @@ int main()
                 }
                 a= a + gol(matriz, chute);
                 printf("\n-----------------------------------------------------------------");
-                printf("\n%s digite um numero para bater #%d penalti->", timeB, penalti);
+                printf("\n%s COBRADOR #%d digite numero para CHUTAR->", timeB, penalti);
                 scanf("%d", &chute);
-                printf("\n%s digite um numero para defender penalti->", timeA);
+                printf("\n%s DEFENSOR #%d digite numero para DEFENDER->", timeA);
                 scanf("%d", &defesa);
                 printf("\n");
                 goleira(matriz);

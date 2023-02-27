@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 #define MAXTAM 50
 int main(){
 char frase[MAXTAM];

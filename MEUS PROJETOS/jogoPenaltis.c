@@ -286,7 +286,7 @@ int main()
                 printf("\n-----------------------------------------------------------------");
                 printf("\n%s COBRADOR #%d digite numero para CHUTAR->", timeB, penalti);
                 scanf("%d", &chute);
-                printf("\n%s DEFENSOR #%d digite numero para DEFENDER->", timeA);
+                printf("\n%s DEFENSOR #%d digite numero para DEFENDER->", timeA, penalti);
                 scanf("%d", &defesa);
                 printf("\n");
                 goleira(matriz);
@@ -308,6 +308,9 @@ int main()
                 {
                     e = empate(a,b);
                 }
+                printf("\n");
+                scanf("%d", &chute);
+                system("cls");
             }
             placarFinal(a, b, timeA, timeB);
         }
